@@ -1,0 +1,4 @@
+include ':app'
+include ':jshint-javaport'
+project(':jshint-javaport').projectDir = new File('/jshint-javaport')
+rootProject.name='POONotifier'

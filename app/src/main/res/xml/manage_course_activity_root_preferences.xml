@@ -1,0 +1,14 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:key="main_pref_category" app:title="Gerir curso">
+        <SwitchPreferenceCompat
+            app:key="manage_course"
+            app:summaryOff="Este curso não irá ser monitorizado por alterações na sua página."
+            app:summaryOn="Este curso irá ser monitorizado por alterações na sua página."
+            app:title="Monitorizar curso" />
+        <Preference
+            app:key="remove_course"
+            app:title="Remover este curso da lista"
+            app:summary="Ao remover este curso da lista, este não aparecerá nas opções de cursos para serem monitorizados."
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

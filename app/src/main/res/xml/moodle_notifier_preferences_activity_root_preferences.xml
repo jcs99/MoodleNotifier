@@ -1,0 +1,19 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:title="Configurações Gerais">
+        <SwitchPreferenceCompat
+            app:key="turn_persistent_page_check_off"
+            app:title="Desligar verificação persistente das páginas" />
+        <EditTextPreference
+            app:key="check_delay_time"
+            app:title="Tempo de espera até à próxima verificação"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreferenceCompat
+            app:key="turn_persistent_notification_off"
+            app:title="Desligar notificação persistente" />
+        <!-- <SwitchPreferenceCompat
+            app:key="manage_course"
+            app:summaryOff="As verificações poderão não correr de forma persistente."
+            app:summaryOn="As verificações irão correr persistentemente, independentemente do telemóvel estar desligado ou não."
+            app:title="Verificação persistente" /> -->
+    </PreferenceCategory>
+</PreferenceScreen>

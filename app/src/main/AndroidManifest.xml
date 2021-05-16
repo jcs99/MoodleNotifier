@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gmail.etpr99.jose.moodlenotifier">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".application.MoodleNotifierApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".CheckPageActivity"></activity>
+        <activity
+            android:name=".MoodleNotifierPreferencesActivity"
+            android:label="@string/title_activity_moodle_notifier_application_preferences" />
+        <activity
+            android:name=".MainActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.MaterialComponents.Transparent.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MoodleCourseUnitSelectorActivity"
+            android:excludeFromRecents="true" />
+        <activity
+            android:name=".MonitoringActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".ManageCourseActivity"
+            android:label="@string/title_activity_manage_course" />
+
+        <service
+            android:name=".MainApplicationService"
+            android:exported="false" />
+        <service
+            android:name=".network.services.MoodleCourseUnitPageCheckerService"
+            android:exported="false" />
+    </application>
+
+</manifest>
